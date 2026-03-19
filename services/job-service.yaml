@@ -2,14 +2,16 @@ server:
   port: 8082
 
 spring:
-  data:
-    mongodb:
-      host: localhost
-      port: 13500
-      database: quickhire_jobs
-      username: root
-      password: mongodb
-      authentication-database: admin
+  mvc:
+    problemdetails:
+      enabled: true
+  mongodb:
+    host: localhost
+    port: 13500
+    database: quickhire_jobs
+    username: root
+    password: mongodb
+    authentication-database: admin
 
 eureka:
   client:
