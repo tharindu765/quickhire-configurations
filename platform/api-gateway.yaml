@@ -4,20 +4,27 @@ server:
 spring:
   cloud:
     gateway:
-      mvc:
-        routes:
-          - id: user-service
-            uri: lb://user-service
-            predicates:
-              - Path=/api/users/**
-          - id: job-service
-            uri: lb://job-service
-            predicates:
-              - Path=/api/jobs/**
-          - id: file-service
-            uri: lb://file-service
-            predicates:
-              - Path=/api/files/**
+      server:
+        webflux:
+          routes:
+            - id: user-service
+              uri: lb://USER-SERVICE
+              predicates:
+                - Path=/api/users/**
+            - id: job-service
+              uri: lb://JOB-SERVICE
+              predicates:
+                - Path=/api/jobs/**
+            - id: file-service
+              uri: lb://FILE-SERVICE
+              predicates:
+                - Path=/api/files/**
+          globalcors:
+            cors-configurations:
+              '[/**]':
+                allowedOrigins: "*"
+                allowed-methods: "*"
+                allowed-headers: "*"
 
 eureka:
   client:
