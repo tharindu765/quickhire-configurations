@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/quickhire_users
+    url: jdbc:postgresql://localhost:12500/quickhire_users
     username: postgres
     password: psql
     driver-class-name: org.postgresql.Driver
