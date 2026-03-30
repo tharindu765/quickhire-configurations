@@ -6,12 +6,8 @@ spring:
     problemdetails:
       enabled: true
   mongodb:
-    host: localhost
-    port: 13500
-    database: quickhire_jobs
-    username: root
-    password: mongodb
-    authentication-database: admin
+    uri: "mongodb://root:ZrjzWhPC_uEbHkGpXF4GiWLDVmC4SChTHRahTApXgvduycqG@887a4b5c-bb10-409f-a140-554428ce6c25.asia-southeast1.firestore.goog:443/db-quickhire?loadBalanced=true&tls=true&authMechanism=SCRAM-SHA-256&retryWrites=false"
+
 
 eureka:
   instance:
